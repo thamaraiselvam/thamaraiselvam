@@ -14,3 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+![Karuppiah Natarajan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=thamaraiselvam&show_icons=true&hide_border=true&theme=tokyonight "Karuppiah Natarajan's GitHub Stats")
