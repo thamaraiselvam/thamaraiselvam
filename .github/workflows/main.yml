@@ -17,18 +17,8 @@ jobs:
         with:
           filename: profile/introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header
+          base: "header, community, repositories, metadata"
           plugin_introduction: yes
-
-      # ======================================================================================
-      # 📈 Personal Metrics
-      # Display Personal Metrics
-      - name: 📈 Personal metrics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: profile/metrics.svg
-          base: "header, repositories"
-          token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: Asia/Kolkata
           config_padding: 10%
 
@@ -54,7 +44,6 @@ jobs:
           filename: profile/calendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
           base: ""
           config_padding: 10%
 
@@ -169,3 +158,28 @@ jobs:
           base: ""
           plugin_achievements: yes
           plugin_achievements_only: polyglot, stargazer, developer, contributor, octonaut
+
+      # ======================================================================================
+      # ✨ Stargazers over last weeks
+
+      # Display stargazers evolution over last weeks
+      - name: ✨ Stargazers plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: profile/stargazers.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stargazers: yes
+
+      # ======================================================================================
+      # ⏱️ Website performances
+
+      - name: ⏱️ PageSpeed plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: profile/pagespeed.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          plugin_pagespeed: yes
+          plugin_pagespeed_detailed: yes
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+          plugin_pagespeed_url: ${{ secrets.WEBSITE_URL }}
