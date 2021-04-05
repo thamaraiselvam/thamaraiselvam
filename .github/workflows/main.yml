@@ -118,22 +118,6 @@ jobs:
           plugin_stackoverflow_user: 2975952
           plugin_stackoverflow_sections: ""
 
-
-      # ======================================================================================
-      # 🌇 GitHub Skyline 3D calendar
-
-      # GitHub skyline commits calendar
-      - name: 🌇 GitHub Skyline 3D calendar
-        uses: lowlighter/metrics@master
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: profile/skyline.svg
-          plugin_skyline: yes
-          plugin_skyline_year: 2021
-          plugin_skyline_frames: 6
-          plugin_skyline_quality: 1
-
-
       # ======================================================================================
       # 🎭 Comment reactions plugin
 
