@@ -16,7 +16,6 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           filename: profile/introduction.svg
-          description: test
           token: ${{ secrets.METRICS_TOKEN }}
           base: header
           plugin_introduction: yes
@@ -156,7 +155,7 @@ jobs:
       - name: 🎟️ Follow-up plugin
         uses: lowlighter/metrics@master
         with:
-          filename: profile/metrics.plugin.followup.svg
+          filename: profile/followup.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_followup: yes
@@ -169,7 +168,7 @@ jobs:
       - name: 👨‍💻 Lines plugin
         uses: lowlighter/metrics@master
         with:
-          filename: profile/metrics.plugin.lines.svg
+          filename: profile/lines.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: repositories
           plugin_lines: yes
@@ -181,7 +180,7 @@ jobs:
       - name: 🏆 Achievements
         uses: lowlighter/metrics@master
         with:
-          filename: profile/metrics.plugin.achievements.svg
+          filename: profile/achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_achievements: yes
