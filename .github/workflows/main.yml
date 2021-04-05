@@ -160,16 +160,18 @@ jobs:
           plugin_achievements_only: polyglot, stargazer, developer, contributor, octonaut
 
       # ======================================================================================
-      # ✨ Stargazers over last weeks
+      # 📌 Starred topics
 
-      # Display stargazers evolution over last weeks
-      - name: ✨ Stargazers plugin
+      # Display starred topics
+      - name: 📌 Topics plugin (mastered)
         uses: lowlighter/metrics@master
         with:
-          filename: profile/stargazers.svg
+          filename: profile/topics.mastered.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
-          plugin_stargazers: yes
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: mastered
 
       # ======================================================================================
       # ⏱️ Website performances
@@ -178,7 +180,7 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           filename: profile/pagespeed.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ""
           plugin_pagespeed: yes
           plugin_pagespeed_detailed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
