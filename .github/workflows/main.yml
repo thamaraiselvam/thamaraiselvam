@@ -7,9 +7,12 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
+
       # ======================================================================================
-      # Display introduction
-      - name: Introduction plugin
+      # 🙋 Introduction
+
+      # Display introduction (user)
+      - name: 🙋 Introduction plugin
         uses: lowlighter/metrics@master
         with:
           filename: introduction.svg
@@ -17,9 +20,11 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header
           plugin_introduction: yes
+
       # ======================================================================================
+      # 📈 Personal Metrics
       # Display Personal Metrics
-      - name: Personal metrics
+      - name: 📈 Personal metrics
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
@@ -27,18 +32,24 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: Asia/Kolkata
           config_padding: 10%
+
       # ======================================================================================
-      # Display Personal Activities
-      - name: Personal Activities
+      # 📰 Recent activity
+
+      # Display recent activity
+      - name: 📰 Personal Activities
         uses: lowlighter/metrics@latest
         with:
           filename: activity.svg
           base: "activity, community, metatdata"
           token: ${{ secrets.METRICS_TOKEN }}
           config_padding: 10%
+
       # ======================================================================================
-      # Display Calendar
-      - name: Calendar
+      # 📅 Isometric commit calendar
+
+      # Display isometric calendar (365 days)
+      - name: 📅 Calendar
         uses: lowlighter/metrics@latest
         with:
           filename: calendar.svg
@@ -47,9 +58,12 @@ jobs:
           plugin_isocalendar_duration: full-year
           base: ""
           config_padding: 10%
+
       # ======================================================================================
-      # Display Used Languages
-      - name: Plugin Languages
+      # 🈷️ Most used languages
+
+      # Display most used languages
+      - name: 🈷️ Plugin Languages
         uses: lowlighter/metrics@latest
         with:
           filename: languages.svg
@@ -57,23 +71,28 @@ jobs:
           plugin_languages: yes
           base: ""
           plugin_topics: yes
-          plugin_topics_mode: mastered
-          plugin_topics_limit: 0
           config_padding: 10%
-          plugin_languages_details: bytes-size, percentage             # Additionally display total bytes size and percentage
+          plugin_languages_details: bytes-size, percentage
+
       # ======================================================================================
-      # Display Posts dev.to
-      - name: Plugin Posts Dev.to
+      # ✒️ Recent posts
+
+      # Display recent posts
+      - name: ✒️ Plugin Posts Dev.to
         uses: lowlighter/metrics@latest
         with:
           filename: posts.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_posts: yes
+          plugin_posts_limit: 5
           plugin_posts_source: dev.to
           base: ""
+
       # ======================================================================================
-      # Display Habits
-      - name: Plugin Habits
+      # 💡 Coding habits
+
+      # Display coding habits and recent activity
+      - name: 💡 Plugin Habits
         uses: lowlighter/metrics@latest
         with:
           filename: habits.svg
@@ -85,9 +104,13 @@ jobs:
           plugin_habits_charts: yes
           base: ""
           config_timezone: Asia/Kolkata
+
+
       # ======================================================================================
-      # Display Stackoverflow Stats
-      - name: Stackoverflow plugin
+      # 🗨️ Stackoverflow plugin
+
+      # Display Stackoverflow metrics
+      - name: 🗨️ Stackoverflow plugin
         uses: lowlighter/metrics@latest
         with:
           filename: stackoverflow.svg
@@ -95,19 +118,27 @@ jobs:
           base: ""
           plugin_stackoverflow: yes
           plugin_stackoverflow_user: 2975952
-          plugin_stackoverflow_limit: 0
+          plugin_stackoverflow_sections: ""
+
 
       # ======================================================================================
+      # 🌇 GitHub Skyline 3D calendar
+
       # GitHub skyline commits calendar
       - name: 🌇 GitHub Skyline 3D calendar
         uses: lowlighter/metrics@master
         with:
+          token: ${{ secrets.METRICS_TOKEN }}
           filename: skyline.svg
           plugin_skyline: yes
           plugin_skyline_year: 2021
           plugin_skyline_frames: 6
           plugin_skyline_quality: 1
+
+
       # ======================================================================================
+      # 🎭 Comment reactions plugin
+
       # Display comment reactions statistics
       - name: 🎭 Reactions plugin
         uses: lowlighter/metrics@master
@@ -118,7 +149,10 @@ jobs:
           plugin_reactions: yes
           plugin_reactions_limit: 100
           plugin_reactions_details: percentage
+
       # ======================================================================================
+      # 🎟️ Follow-up of issues and pull requests
+
       # Display ratio of open/closed/merged issues and pull requests
       - name: 🎟️ Follow-up plugin
         uses: lowlighter/metrics@master
@@ -127,8 +161,12 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_followup: yes
+
+
       # ======================================================================================
-      # Display number of line changed (this is part of base content "repositories" section, so you need to enable it)
+      # 👨‍💻 Lines of code changed
+
+      # Display number of line changed
       - name: 👨‍💻 Lines plugin
         uses: lowlighter/metrics@master
         with:
@@ -136,7 +174,10 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: repositories
           plugin_lines: yes
+
       # ======================================================================================
+      # 🏆 Achievements
+
       # Achievements
       - name: 🏆 Achievements
         uses: lowlighter/metrics@master
