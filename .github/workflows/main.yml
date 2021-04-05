@@ -37,15 +37,14 @@ jobs:
       # ======================================================================================
       # 📅 Isometric commit calendar
 
-      # Display isometric calendar (365 days)
-      - name: 📅 Calendar
-        uses: lowlighter/metrics@latest
+      # Display isometric calendar (180 days)
+      - name: 📅  Calendar
+        uses: lowlighter/metrics@master
         with:
-          filename: profile/calendar.svg
+          filename: profile/isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          plugin_isocalendar: yes
           base: ""
-          config_padding: 10%
+          plugin_isocalendar: yes
 
       # ======================================================================================
       # 🈷️ Most used languages
@@ -166,7 +165,7 @@ jobs:
       - name: 📌 Topics plugin (mastered)
         uses: lowlighter/metrics@master
         with:
-          filename: profile/topics.mastered.svg
+          filename: profile/mastered.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_topics: yes
@@ -180,7 +179,7 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           filename: profile/pagespeed.svg
-          token: ""
+          token: NOT_NEEDED
           plugin_pagespeed: yes
           plugin_pagespeed_detailed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
