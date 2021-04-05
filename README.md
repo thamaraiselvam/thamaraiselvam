@@ -1,14 +1,54 @@
-### Hi there 👋
+# 👨‍💻 Thamaraiselvam  <img alt="" style="max-width:100%;position: relative;top: 3.5px;" width="55" src="https://views.whatilearened.today/views/github/thamaraiselvam/thamaraiselvam.svg">
 
-I am [Thamaraiselvam](https://thamaraiselvam.dev)
-
-### Here is some stats:  ![ViewCount](https://views.whatilearened.today/views/github/thamaraiselvam/thamaraiselvam.svg)
-
-![Thamaraiselvam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=thamaraiselvam&show_icons=true&hide_border=true&theme=tokyonight "Thamaraiselvam's GitHub Stats")
-
-Pinned Blogs:
-- [ Terminal Enhancers - Part 1](https://thamaraiselvam.dev/terminal-enhancers-part-1-cke82u68f02iryjs1hfry9xcu)
-- [Database Replication: Master-Slave Replication Architecture](https://thamaraiselvam.dev/database-replication-master-slave-replication-architecture-ck66skn6r03r8kbs16egqnzvg)
-- [MEAN Stack - Cheat Sheet](https://thamaraiselvam.dev/mean-stack-cheat-sheet-cjxyjol4r0019qas1c7e4pmzp)
-- [Create Extensions for VS Code - Part 1](https://thamaraiselvam.dev/create-extensions-for-vs-code-part-1-cjx5r238f000t65s1ag0fdn8e)
-- [Implementing Backward and Forward buttons of Browser in JavaScript Using Stack Data Structure](https://thamaraiselvam.dev/learn-and-implement-data-structure-in-js-singly-linkedlist)
+<table style="border: 0px">
+  <tr style="border: 0px" >
+    <td style="border: 0px" align="center">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/introduction.svg">
+      <img width="900" height="1" alt="">
+    </td>
+    <td align="center" style="border: 0px">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/activity.svg">
+      <img width="900" height="1" alt="">
+    </td>
+  </tr>
+  <tr style="border: 0px" >
+    <td style="border: 0px" align="center">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/languages.svg">
+      <img width="900" height="1" alt="">
+    </td>
+    <td align="center" style="border: 0px">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/mastered.svg">
+      <img width="900" height="1" alt="">
+    </td>
+  </tr>
+  <tr style="border: 0px" >
+    <td style="border: 0px" align="center">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/achievements.svg">
+      <img width="900" height="1" alt="">
+    </td>
+    <td style="border: 0px" align="center">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/calendar.svg">
+      <img width="900" height="1" alt="">
+    </td>
+  </tr>
+  <tr style="border: 0px" >
+    <td style="border: 0px" align="center">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/followup.svg">
+      <img width="900" height="1" alt="">
+    </td>
+    <td align="center" style="border: 0px">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/reactions.svg">
+      <img width="900" height="1" alt="">
+    </td>
+  </tr>
+  <tr style="border: 0px" >
+    <td align="center" style="border: 0px">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/posts.svg">
+      <img width="900" height="1" alt="">
+    </td>
+    <td align="center" style="border: 0px">
+      <img alt="" width="400" src="https://github.com/thamaraiselvam/thamaraiselvam/blob/master/profile/stackoverflow.svg">
+      <img width="900" height="1" alt="">
+    </td>
+  </tr>
+</table>
