@@ -95,4 +95,54 @@ jobs:
           base: ""
           plugin_stackoverflow: yes
           plugin_stackoverflow_user: 2975952
-          plugin_stackoverflow_limit: 2
+          plugin_stackoverflow_limit: 0
+
+      # ======================================================================================
+      # GitHub skyline commits calendar
+      - name: 🌇 GitHub Skyline 3D calendar
+        uses: lowlighter/metrics@master
+        with:
+          filename: skyline.svg
+          plugin_skyline: yes
+          plugin_skyline_year: 2021
+          plugin_skyline_frames: 6
+          plugin_skyline_quality: 1
+      # ======================================================================================
+      # Display comment reactions statistics
+      - name: 🎭 Reactions plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: reactions.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_reactions: yes
+          plugin_reactions_limit: 100
+          plugin_reactions_details: percentage
+      # ======================================================================================
+      # Display ratio of open/closed/merged issues and pull requests
+      - name: 🎟️ Follow-up plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.followup.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_followup: yes
+      # ======================================================================================
+      # Display number of line changed (this is part of base content "repositories" section, so you need to enable it)
+      - name: 👨‍💻 Lines plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.lines.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_lines: yes
+      # ======================================================================================
+      # Achievements
+      - name: 🏆 Achievements
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_only: polyglot, stargazer, developer, contributor, octonaut
