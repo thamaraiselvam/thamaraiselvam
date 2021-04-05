@@ -70,7 +70,6 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_languages: yes
           base: ""
-          plugin_topics: yes
           config_padding: 10%
           plugin_languages_details: bytes-size, percentage
 
@@ -110,7 +109,7 @@ jobs:
       # 🗨️ Stackoverflow plugin
 
       # Display Stackoverflow metrics
-      - name: 🗨️ Stackoverflow plugin
+      - name: 🗨️  Stackoverflow plugin
         uses: lowlighter/metrics@latest
         with:
           filename: stackoverflow.svg
