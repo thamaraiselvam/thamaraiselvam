@@ -15,7 +15,7 @@ jobs:
       - name: 🙋 Introduction plugin
         uses: lowlighter/metrics@master
         with:
-          filename: introduction.svg
+          filename: profile/introduction.svg
           description: test
           token: ${{ secrets.METRICS_TOKEN }}
           base: header
@@ -27,7 +27,7 @@ jobs:
       - name: 📈 Personal metrics
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.svg
+          filename: profile/metrics.svg
           base: "header, repositories"
           token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: Asia/Kolkata
@@ -40,7 +40,7 @@ jobs:
       - name: 📰 Personal Activities
         uses: lowlighter/metrics@latest
         with:
-          filename: activity.svg
+          filename: profile/activity.svg
           base: "activity, community, metatdata"
           token: ${{ secrets.METRICS_TOKEN }}
           config_padding: 10%
@@ -52,7 +52,7 @@ jobs:
       - name: 📅 Calendar
         uses: lowlighter/metrics@latest
         with:
-          filename: calendar.svg
+          filename: profile/calendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
@@ -66,7 +66,7 @@ jobs:
       - name: 🈷️ Plugin Languages
         uses: lowlighter/metrics@latest
         with:
-          filename: languages.svg
+          filename: profile/languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_languages: yes
           base: ""
@@ -80,7 +80,7 @@ jobs:
       - name: ✒️ Plugin Posts Dev.to
         uses: lowlighter/metrics@latest
         with:
-          filename: posts.svg
+          filename: profile/posts.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_posts: yes
           plugin_posts_limit: 5
@@ -94,7 +94,7 @@ jobs:
       - name: 💡 Plugin Habits
         uses: lowlighter/metrics@latest
         with:
-          filename: habits.svg
+          filename: profile/habits.svg
           token: ${{ secrets.METRICS_TOKEN }}
           plugin_habits: yes
           plugin_habits_from: 220
@@ -112,7 +112,7 @@ jobs:
       - name: 🗨️  Stackoverflow plugin
         uses: lowlighter/metrics@latest
         with:
-          filename: stackoverflow.svg
+          filename: profile/stackoverflow.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_stackoverflow: yes
@@ -128,7 +128,7 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: skyline.svg
+          filename: profile/skyline.svg
           plugin_skyline: yes
           plugin_skyline_year: 2021
           plugin_skyline_frames: 6
@@ -142,7 +142,7 @@ jobs:
       - name: 🎭 Reactions plugin
         uses: lowlighter/metrics@master
         with:
-          filename: reactions.svg
+          filename: profile/reactions.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_reactions: yes
@@ -156,7 +156,7 @@ jobs:
       - name: 🎟️ Follow-up plugin
         uses: lowlighter/metrics@master
         with:
-          filename: metrics.plugin.followup.svg
+          filename: profile/metrics.plugin.followup.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_followup: yes
@@ -169,7 +169,7 @@ jobs:
       - name: 👨‍💻 Lines plugin
         uses: lowlighter/metrics@master
         with:
-          filename: metrics.plugin.lines.svg
+          filename: profile/metrics.plugin.lines.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: repositories
           plugin_lines: yes
@@ -181,7 +181,7 @@ jobs:
       - name: 🏆 Achievements
         uses: lowlighter/metrics@master
         with:
-          filename: metrics.plugin.achievements.svg
+          filename: profile/metrics.plugin.achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_achievements: yes
