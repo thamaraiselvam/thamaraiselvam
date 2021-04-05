@@ -7,6 +7,18 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
+      # ======================================================================================
+      # Display introduction
+      - name: Introduction plugin
+        uses: lowlighter/metrics@master
+        with:
+          filename: introduction.svg
+          description: test
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header
+          plugin_introduction: yes
+      # ======================================================================================
+      # Display Personal Metrics
       - name: Personal metrics
         uses: lowlighter/metrics@latest
         with:
@@ -15,7 +27,8 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: Asia/Kolkata
           config_padding: 10%
-
+      # ======================================================================================
+      # Display Personal Activities
       - name: Personal Activities
         uses: lowlighter/metrics@latest
         with:
@@ -23,7 +36,8 @@ jobs:
           base: "activity, community, metatdata"
           token: ${{ secrets.METRICS_TOKEN }}
           config_padding: 10%
-
+      # ======================================================================================
+      # Display Calendar
       - name: Calendar
         uses: lowlighter/metrics@latest
         with:
@@ -33,7 +47,8 @@ jobs:
           plugin_isocalendar_duration: full-year
           base: ""
           config_padding: 10%
-
+      # ======================================================================================
+      # Display Used Languages
       - name: Plugin Languages
         uses: lowlighter/metrics@latest
         with:
@@ -46,8 +61,8 @@ jobs:
           plugin_topics_limit: 0
           config_padding: 10%
           plugin_languages_details: bytes-size, percentage             # Additionally display total bytes size and percentage
-
-
+      # ======================================================================================
+      # Display Posts dev.to
       - name: Plugin Posts Dev.to
         uses: lowlighter/metrics@latest
         with:
@@ -56,8 +71,8 @@ jobs:
           plugin_posts: yes
           plugin_posts_source: dev.to
           base: ""
-
-
+      # ======================================================================================
+      # Display Habits
       - name: Plugin Habits
         uses: lowlighter/metrics@latest
         with:
@@ -70,7 +85,8 @@ jobs:
           plugin_habits_charts: yes
           base: ""
           config_timezone: Asia/Kolkata
-
+      # ======================================================================================
+      # Display Stackoverflow Stats
       - name: Stackoverflow plugin
         uses: lowlighter/metrics@latest
         with:
