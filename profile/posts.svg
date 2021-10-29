@@ -1350,7 +1350,7 @@
                                 </svg>
                                 <div class="infos">
                                     <div class="left">
-                                        <div class="date">24/08/2020</div>
+                                        <div class="date">24 Aug 2020</div>
                                     </div>
                                     <div class="right">
                                         <div class="title">Terminal Enhancers - Part 1</div>
@@ -1363,7 +1363,7 @@
                                 </svg>
                                 <div class="infos">
                                     <div class="left">
-                                        <div class="date">11/02/2020</div>
+                                        <div class="date">11 Feb 2020</div>
                                     </div>
                                     <div class="right">
                                         <div class="title">Synchronous Vs Asynchronous Database Replication</div>
@@ -1376,7 +1376,7 @@
                                 </svg>
                                 <div class="infos">
                                     <div class="left">
-                                        <div class="date">03/02/2020</div>
+                                        <div class="date">3 Feb 2020</div>
                                     </div>
                                     <div class="right">
                                         <div class="title">Database Replication: Master-Slave Replication Architecture</div>
@@ -1389,7 +1389,7 @@
                                 </svg>
                                 <div class="infos">
                                     <div class="left">
-                                        <div class="date">01/02/2020</div>
+                                        <div class="date">1 Feb 2020</div>
                                     </div>
                                     <div class="right">
                                         <div class="title">The need for Database Replication</div>
@@ -1402,7 +1402,7 @@
                                 </svg>
                                 <div class="infos">
                                     <div class="left">
-                                        <div class="date">14/11/2019</div>
+                                        <div class="date">14 Nov 2019</div>
                                     </div>
                                     <div class="right">
                                         <div class="title">Any active contributors on Stackoverflow?</div>
