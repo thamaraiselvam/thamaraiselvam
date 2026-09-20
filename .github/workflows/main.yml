@@ -50,42 +50,42 @@ jobs:
 
 
       # ======================================================================================
-      # 📰 Recent activity
+      # 📰 Recent activity (disabled: activity & community stats removed from profile)
 
       # Display recent activity
-      - name: 📰 Personal Activities
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/activity.svg
-          base: "activity, community, metatdata"
-          token: ${{ secrets.METRICS_TOKEN }}
-          config_padding: 10%
+      # - name: 📰 Personal Activities
+      #   uses: gh-metrics/metrics@master
+      #   with:
+      #     filename: profile/activity.svg
+      #     base: "activity, community, metatdata"
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     config_padding: 10%
 
       # ======================================================================================
-      # 📅 Isometric commit calendar
+      # 📅 Isometric commit calendar (disabled: contributor calendar removed from profile)
 
       # Display isometric calendar (180 days)
-      - name: 📅  Calendar
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_isocalendar: yes
+      # - name: 📅  Calendar
+      #   uses: gh-metrics/metrics@master
+      #   with:
+      #     filename: profile/isocalendar.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     base: ""
+      #     plugin_isocalendar: yes
 
       # ======================================================================================
-      # ✒️ Recent posts
+      # ✒️ Recent posts (disabled: recent article removed from profile)
 
       # Display recent posts
-      - name: ✒️ Plugin Posts Dev.to
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/posts.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          plugin_posts: yes
-          plugin_posts_limit: 5
-          plugin_posts_source: dev.to
-          base: ""
+      # - name: ✒️ Plugin Posts Dev.to
+      #   uses: gh-metrics/metrics@master
+      #   with:
+      #     filename: profile/posts.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     plugin_posts: yes
+      #     plugin_posts_limit: 5
+      #     plugin_posts_source: dev.to
+      #     base: ""
 
       # ======================================================================================
       # 💡 Coding habits
@@ -106,18 +106,18 @@ jobs:
 
 
       # ======================================================================================
-      # 🗨️ Stackoverflow plugin
+      # 🗨️ Stackoverflow plugin (disabled: stackoverflow metrics removed from profile)
 
       # Display Stackoverflow metrics
-      - name: 🗨️  Stackoverflow plugin
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/stackoverflow.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_stackoverflow: yes
-          plugin_stackoverflow_user: 2975952
-          plugin_stackoverflow_sections: ""
+      # - name: 🗨️  Stackoverflow plugin
+      #   uses: gh-metrics/metrics@master
+      #   with:
+      #     filename: profile/stackoverflow.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     base: ""
+      #     plugin_stackoverflow: yes
+      #     plugin_stackoverflow_user: 2975952
+      #     plugin_stackoverflow_sections: ""
 
       # ======================================================================================
       # 🎭 Comment reactions plugin
@@ -187,3 +187,26 @@ jobs:
           plugin_pagespeed_detailed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
           plugin_pagespeed_url: ${{ secrets.WEBSITE_URL }}
+
+  # ======================================================================================
+  # 🐍 Contribution snake animation (https://github.com/Platane/snk)
+
+  github-snake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate profile/snake-dark.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: thamaraiselvam
+          outputs: profile/snake-dark.svg?palette=github-dark
+
+      - name: Commit and push snake animation
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update profile/snake-dark.svg - [Skip GitHub Action]"
+          file_pattern: profile/snake-dark.svg
