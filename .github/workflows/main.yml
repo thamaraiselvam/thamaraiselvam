@@ -13,7 +13,7 @@ jobs:
 
       # Display introduction (user)
       - name: 🙋 Introduction plugin
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
 
       # Display recent activity
       - name: 📰 Personal Activities
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/activity.svg
           base: "activity, community, metatdata"
@@ -39,7 +39,7 @@ jobs:
 
       # Display isometric calendar (180 days)
       - name: 📅  Calendar
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -51,7 +51,7 @@ jobs:
 
       # Display most used languages
       - name: 🈷️ Plugin Languages
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -65,7 +65,7 @@ jobs:
 
       # Display recent posts
       - name: ✒️ Plugin Posts Dev.to
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/posts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
 
       # Display coding habits and recent activity
       - name: 💡 Plugin Habits
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/habits.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -97,7 +97,7 @@ jobs:
 
       # Display Stackoverflow metrics
       - name: 🗨️  Stackoverflow plugin
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/stackoverflow.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -111,7 +111,7 @@ jobs:
 
       # Display comment reactions statistics
       - name: 🎭 Reactions plugin
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/reactions.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -125,7 +125,7 @@ jobs:
 
       # Display ratio of open/closed/merged issues and pull requests
       - name: 🎟️ Follow-up plugin
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/followup.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -138,7 +138,7 @@ jobs:
 
       # Display number of line changed
       - name: 👨‍💻 Lines plugin
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/lines.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -150,7 +150,7 @@ jobs:
 
       # Achievements
       - name: 🏆 Achievements
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -166,7 +166,7 @@ jobs:
 
       # Display starred topics
       - name: 📌 Topics plugin (mastered)
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/mastered.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -179,7 +179,7 @@ jobs:
       # ⏱️ Website performances
 
       - name: ⏱️ PageSpeed plugin
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           filename: profile/pagespeed.svg
           token: NOT_NEEDED
