@@ -23,6 +23,33 @@ jobs:
           config_padding: 10%
 
       # ======================================================================================
+      # 🈷️ Most used languages
+
+      # Display most used languages
+      - name: 🈷️ Plugin Languages
+        uses: gh-metrics/metrics@master
+        with:
+          filename: profile/languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          plugin_languages: yes
+          base: ""
+          config_padding: 10%
+          plugin_languages_details: bytes-size, percentage
+
+      # ======================================================================================
+      # 🎟️ Follow-up of issues and pull requests
+
+      # Display ratio of open/closed/merged issues and pull requests
+      - name: 🎟️ Follow-up plugin
+        uses: gh-metrics/metrics@master
+        with:
+          filename: profile/followup.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_followup: yes
+
+
+      # ======================================================================================
       # 📰 Recent activity
 
       # Display recent activity
@@ -45,20 +72,6 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
-
-      # ======================================================================================
-      # 🈷️ Most used languages
-
-      # Display most used languages
-      - name: 🈷️ Plugin Languages
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          plugin_languages: yes
-          base: ""
-          config_padding: 10%
-          plugin_languages_details: bytes-size, percentage
 
       # ======================================================================================
       # ✒️ Recent posts
@@ -119,19 +132,6 @@ jobs:
           plugin_reactions: yes
           plugin_reactions_limit: 100
           plugin_reactions_details: percentage
-
-      # ======================================================================================
-      # 🎟️ Follow-up of issues and pull requests
-
-      # Display ratio of open/closed/merged issues and pull requests
-      - name: 🎟️ Follow-up plugin
-        uses: gh-metrics/metrics@master
-        with:
-          filename: profile/followup.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_followup: yes
-
 
       # ======================================================================================
       # 👨‍💻 Lines of code changed
