@@ -17,8 +17,8 @@ jobs:
         with:
           filename: profile/introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: "header, community, repositories, metadata"
-          plugin_introduction: yes
+          base: "header, repositories"
+          plugin_introduction: no
           config_timezone: Asia/Kolkata
           config_padding: 10%
 
